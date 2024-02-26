@@ -1,72 +1,80 @@
 # 🌟 GitHub Wiki to ChatGPT-4 Document Integrator 🌟
 
-Welcome to the future of documentation interaction! The GitHub Wiki to ChatGPT-4 Document Integrator is your first-class Python tool designed to magically transform GitHub Wiki repositories into engaging, conversational documents that are perfectly compatible with OpenAI's ChatGPT-4. This tool is a game-changer for software developers, academic wizards, and educational pioneers who rely on GitHub for documentation and are eager to tap into the advanced, AI-driven insights of ChatGPT-4 for an enriched understanding of their projects and research.
+The GitHub Wiki to ChatGPT-4 Document Integrator is a Python-based tool designed to facilitate the integration of GitHub Wiki or code repository content into a structured JSON format suitable for processing with OpenAI's ChatGPT-4. This tool automatically clones the specified repository, processes its contents based on whether it's a wiki or a code repository, and outputs a structured JSON document.
 
-## ✨ Core Features
+## Features
 
-- **Automated GitHub Wiki Cloning**: Say goodbye to the tedious manual content retrieval! Our tool automatically clones any GitHub Wiki repository with just the clone URL, setting the stage for your documentation's transformation journey.
+- **Automatic Repository Cloning**: Clones GitHub Wiki or code repositories based on the provided URL.
+- **Content Detection**: Automatically detects whether the provided repository is a Wiki or code repository and processes the content accordingly.
+- **Structured JSON Output**: Outputs the processed repository content into a structured JSON file, making it compatible for further processing or analysis.
+- **Interactive Prompts**: Offers an interactive mode that prompts users for input if necessary, enhancing usability.
+- **Command-Line Arguments**: Supports command-line arguments for easy automation and integration into workflows.
 
-- **Content Aggregation Extravaganza**: It smartly combines all your `.md` and `.txt` files into a beautifully cohesive document. Whether your content is vast or concise, it ensures everything is neatly packaged for ChatGPT-4's consumption, making your interaction as smooth as silk.
+## Installation
 
-- **Basic Yet Powerful Token Management**: Our tool understands the art of brevity. It elegantly splits content into perfectly sized chunks that respect ChatGPT-4's token constraints, ensuring your AI interactions are not just possible, but also incredibly efficient.
+### Automated Setup with `start.bat`
 
-## 🚀 Enhanced User Experience
+For Windows users, a `start.bat` file is provided to automate the setup process, including environment setup, dependencies installation, and application execution.
 
-Dive into a seamless integration experience that not only simplifies your journey from GitHub Wiki content to ChatGPT-4 dialogue but also does it with style. This tool is all about enhancing your workflow, allowing you to focus on what truly matters - creating, exploring, and interacting with your content in ways you never thought possible.
+- Double-click the `start.bat` file.
+- Follow the on-screen instructions to complete the setup.
 
-## 🌈 Getting Started
+### Prerequisites
 
-Embark on your journey with minimal fuss, whether you're a fan of clicking your way through setup or diving deep into the command line.
+- Python 3.6 or later.
+- `git` installed and accessible from the command line.
+- Internet access for cloning GitHub repositories.
 
-### 🎉 Automated Setup
+### Setup
 
-For those who wish to leap straight into action, our `start.bat` script for Windows is like a magic wand - a quick flick (double-click, that is) and you'll see your environment setting itself up, dependencies getting in line, and the application springing to life before your eyes.
+1. **Clone the Repository**:
 
-### 🔧 Manual Setup
+```bash
+git clone https://github.com/yourusername/yourrepositoryname.git
+cd yourrepositoryname
+```
 
-Prefer to have your hands on the wheel? Here's how to set everything up manually, with a touch of personal magic:
+2. **Create a Virtual Environment (Optional)**:
 
-1. **Check Your Python Wand**: Ensure Python 3.6 or newer is installed and ready.
+```bash
+python -m venv venv
+```
 
-2. **Summon the Repository**: Cast a cloning spell with Git to bring the repository to your local realm.
+- Activate the virtual environment:
+  - On Windows: `.\venv\Scripts\activate`
+  - On macOS/Linux: `source venv/bin/activate`
 
-    ```bash
-    git clone https://github.com/YourUsername/YourRepository.git
-    ```
+3. **Install Dependencies**:
 
-3. **Conjure a Virtual Environment**: Navigate to your new repository and summon a virtual environment.
+```bash
+pip install -r requirements.txt
+```
 
-    ```bash
-    python -m venv venv
-    ```
+## Usage
 
-4. **Awaken the Virtual Environment**:
-    - For Windows sorcerers: `.\\venv\\Scripts\\activate`
-    - For macOS/Linux druids: `source venv/bin/activate`
+### Command-Line Arguments
 
-5. **Gather the Dependencies**: With pip as your potion, brew together all the necessary ingredients.
+```bash
+python app_v2.py --url <REPOSITORY_URL> --output <OUTPUT_FILE_NAME> --token-limit <TOKEN_LIMIT> --extensions <FILE_EXTENSIONS>
+```
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+- `--url`: The GitHub repository clone URL (required).
+- `--output`: The name of the output JSON file (optional, default `output.json`).
+- `--token-limit`: The token limit for the processed content (optional, default 1800000).
+- `--extensions`: Comma-separated list of supported file extensions (optional, default `.md,.txt,.py,.js,.html`).
 
-6. **Launch the Enchantment**: Begin the magic with a simple incantation.
+### Interactive Mode
 
-    ```bash
-    python app_v2.py
-    ```
+If no arguments are provided, the script will prompt you interactively for the GitHub repository URL.
 
-## 📜 Prerequisites
+## Contributions
 
-- **A Python Wand of 3.6 or Newer**: Essential for casting all your spells.
-- **The Git Scroll**: Required for summoning the repository from the distant lands of GitHub.
+Contributions are welcome! Please feel free to fork the repository, make your changes, and submit a pull request.
 
-## 🌟 Contributions
+## License
 
-Join our circle of magical contributors! If you have enchantments or spells (suggestions or bug fixes), fork the repository, weave in your magic, and present your contributions through a pull request.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📚 License
+---
 
-This mystical project is released under the MIT License - see the LICENSE tome for details.
-
-Dive into the GitHub Wiki to ChatGPT-4 Document Integrator experience, where your documentation comes alive, conversations flow like rivers of knowledge, and every interaction is a step into the extraordinary. Let's make the digital documentation world a little more human, together.
+Remember to replace `https://github.com/yourusername/yourrepositoryname.git` with your actual repository URL. This README provides a comprehensive guide for users to get started with your tool, install it, and understand how to use it effectively.
