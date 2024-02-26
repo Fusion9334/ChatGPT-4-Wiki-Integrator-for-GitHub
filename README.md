@@ -1,46 +1,66 @@
 # GitHub Wiki to ChatGPT-4 Document Integrator
 
-The GitHub Wiki to ChatGPT-4 Document Integrator is an advanced Python utility designed to streamline the conversion of GitHub Wiki content into documents optimized for OpenAI's ChatGPT-4. This tool is essential for developers, researchers, and educators leveraging GitHub for documentation, facilitating enriched interactions with ChatGPT-4 through well-prepared content.
-
-## Features
-
-- **Automated GitHub Wiki Cloning**: Facilitates the cloning of any GitHub Wiki repository with just the clone URL.
-- **Content Optimization for ChatGPT-4**: Formats documentation to be easily ingestible by ChatGPT-4, enhancing user interaction.
-- **Intelligent Document Processing**: Combines and intelligently splits text-based documentation (.md, .txt) to adhere to ChatGPT-4's token limits, ensuring no content is too lengthy for upload.
-- **Advanced Token Limit Management**: Utilizes the `tiktoken` library to accurately manage and optimize content size, making sure documents fit within ChatGPT-4's upload constraints.
+The GitHub Wiki to ChatGPT-4 Document Integrator is a powerful Python utility designed to convert GitHub Wiki content into documents optimized for OpenAI's ChatGPT-4. This tool is ideal for developers, researchers, and educators who use GitHub for documentation and wish to enhance their interaction with ChatGPT-4.
 
 ## Getting Started
 
+### Automated Setup with start.bat
+
+For a quick and easy setup, use the `start.bat` script. This script automates the environment setup, including checking for Python, creating a virtual environment, installing dependencies, and running the application.
+
+1. **Run start.bat**: Double-click the `start.bat` file in the project's root directory. This initiates the automated setup process.
+    - If Python is not installed or not found in the system's PATH, the script will prompt you to install Python and ensure it's added to PATH.
+    - If a virtual environment named `venv` does not exist, the script will create it, activate it, and install the necessary dependencies from `requirements.txt`.
+    - Finally, the script runs the `app_v2.py` script to start the application.
+
+This method is recommended for most users for its simplicity.
+
+### Manual Installation
+
+If you prefer to set up the environment manually, follow these steps:
+
+1. **Check Python Installation**: Ensure that Python 3.6 or later is installed on your system and that Python and pip are added to your system's PATH.
+2. **Clone the Repository**: Clone this repository to your local machine.
+3. **Create a Virtual Environment**: Navigate to the cloned repository's directory and create a virtual environment.
+    ```bash
+    python -m venv venv
+    ```
+4. **Activate the Virtual Environment**: 
+    - On Windows, activate the virtual environment by running:
+    ```bash
+    .\venv\Scripts\activate
+    ```
+    - On macOS and Linux, use:
+    ```bash
+    source venv/bin/activate
+    ```
+5. **Install Dependencies**: Install all required dependencies using pip.
+    ```bash
+    pip install -r requirements.txt
+    ```
+6. **Run the Application**: Start the application with Python.
+    ```bash
+    python app_v2.py
+    ```
+
 ### Prerequisites
 
-- Python 3.6 or later
-- Git
+- **Python 3.6 or later**: Ensure Python is installed and accessible from your system's PATH.
+- **Git**: Required for cloning the repository if using manual installation.
 
-### Installation
+## Features
 
-```bash
-pip install tiktoken  # For token counting and content size optimization
-```
-
-### Usage
-
-1. Start the script and input the GitHub Wiki repository's clone URL as prompted.
-2. The tool will handle the cloning, content processing, and document preparation for ChatGPT-4 compatibility.
-
-```bash
-python app_v2.py  # Initiates the script
-```
-
-## How It Works
-
-After fetching the GitHub Wiki using the clone URL, the tool scans for `.md` and `.txt` files, compiling them into a unified document. Should the content surpass ChatGPT-4's token limits, it automatically segments it into smaller, manageable documents.
+- Automated GitHub Wiki Cloning
+- Content Optimization for ChatGPT-4
+- Intelligent Document Processing
+- Advanced Token Limit Management
 
 ## Contributions
 
-Contributions are encouraged! If you have ideas for enhancements or have discovered bugs, feel free to fork the repository, implement your changes, and submit a pull request.
+Contributions are welcome! If you have suggestions for improvement or have identified bugs, please feel free to fork the repository, make your changes, and submit a pull request.
 
 ## License
 
-Licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This tool significantly simplifies the integration of GitHub Wiki documentation with ChatGPT-4, promoting comprehensive discussions and a deeper understanding of the content.
+---
