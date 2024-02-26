@@ -1,95 +1,46 @@
 # GitHub Wiki to ChatGPT-4 Document Integrator
 
-
-
-The GitHub Wiki to ChatGPT-4 Document Integrator is a Python-based automation tool designed to transform GitHub Wiki content into a cohesive document optimized for interaction with OpenAI's ChatGPT-4. This tool simplifies the process of compiling and formatting GitHub Wiki pages, ensuring the final document stays within the token limits of ChatGPT-4 for seamless upload and discussion.
-
-
+The GitHub Wiki to ChatGPT-4 Document Integrator is an advanced Python utility designed to streamline the conversion of GitHub Wiki content into documents optimized for OpenAI's ChatGPT-4. This tool is essential for developers, researchers, and educators leveraging GitHub for documentation, facilitating enriched interactions with ChatGPT-4 through well-prepared content.
 
 ## Features
 
-
-
-- **Automated GitHub Wiki Cloning**: Clone any GitHub Wiki repository directly using the provided clone URL.
-
-- **Content Optimization for ChatGPT-4**: Ensures the documentation is in a digestible format for ChatGPT-4, facilitating more meaningful interactions.
-
-- **Smart Document Processing**: Automatically merges text-based documentation (.md, .txt) into a single document, or splits it to adhere to token limitations.
-
-- **Token Limit Management**: Utilizes the `tiktoken` library to accurately count tokens, optimizing content size for ChatGPT-4's upload constraints.
-
-
+- **Automated GitHub Wiki Cloning**: Facilitates the cloning of any GitHub Wiki repository with just the clone URL.
+- **Content Optimization for ChatGPT-4**: Formats documentation to be easily ingestible by ChatGPT-4, enhancing user interaction.
+- **Intelligent Document Processing**: Combines and intelligently splits text-based documentation (.md, .txt) to adhere to ChatGPT-4's token limits, ensuring no content is too lengthy for upload.
+- **Advanced Token Limit Management**: Utilizes the `tiktoken` library to accurately manage and optimize content size, making sure documents fit within ChatGPT-4's upload constraints.
 
 ## Getting Started
 
-
-
 ### Prerequisites
 
-
-
-- Python 3.6 or newer
-
-- Git installed on your system
-
-
+- Python 3.6 or later
+- Git
 
 ### Installation
 
-
-
 ```bash
-
-pip install tiktoken  # Install the tiktoken library
-
+pip install tiktoken  # For token counting and content size optimization
 ```
-
-
 
 ### Usage
 
-
-
-1. Run the script and provide the GitHub Wiki repository's clone URL when prompted.
-
-2. The tool will clone the repository, process the content, and generate a document(s) ready for ChatGPT-4.
-
-
+1. Start the script and input the GitHub Wiki repository's clone URL as prompted.
+2. The tool will handle the cloning, content processing, and document preparation for ChatGPT-4 compatibility.
 
 ```bash
-
-python app.py  # Execute the main script
-
+python app_v2.py  # Initiates the script
 ```
-
-
 
 ## How It Works
 
-
-
-The integrator fetches the GitHub Wiki repository using the provided clone URL, then scans for all `.md` and `.txt` files, compiling their contents into a single document. If the content exceeds ChatGPT-4's token limits, it's automatically divided into smaller, manageable documents.
-
-
+After fetching the GitHub Wiki using the clone URL, the tool scans for `.md` and `.txt` files, compiling them into a unified document. Should the content surpass ChatGPT-4's token limits, it automatically segments it into smaller, manageable documents.
 
 ## Contributions
 
-
-
-Contributions are welcome! If you have suggestions for improvement, or have identified bugs, feel free to fork the repository, make your changes, and submit a pull request.
-
-
+Contributions are encouraged! If you have ideas for enhancements or have discovered bugs, feel free to fork the repository, implement your changes, and submit a pull request.
 
 ## License
 
+Licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
-
----
-
-
-
-This tool is particularly useful for developers, researchers, and educational professionals who leverage GitHub for documentation and seek to enhance their interactive experience with ChatGPT-4, ensuring comprehensive subject matter understanding and discussion.
+This tool significantly simplifies the integration of GitHub Wiki documentation with ChatGPT-4, promoting comprehensive discussions and a deeper understanding of the content.
